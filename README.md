@@ -4,6 +4,11 @@ git init：初始化當前目錄
 git status：檢查當前版本狀態
 git add：加入版本控制
 git commit -m "message" 直接建立新版本
+在終端機視窗輸入下列指令，複製遠端數據庫到本機端工作環境
+    
+  git clone https://github.com/你的GitHub帳號/projectD
+  例如:
+  git clone https://github.com/sammykym/projectD
 
 情境一：從本地數據庫添加遠端數據庫
 1.在本地用了 git init 建立數據庫
