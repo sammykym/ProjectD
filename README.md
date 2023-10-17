@@ -1,4 +1,5 @@
 # ProjectD
+cd projectD
 git init：初始化當前目錄
 git status：檢查當前版本狀態
 git add：加入版本控制
