@@ -17,34 +17,83 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="margin-top: 100px;">
-        <nav class="fixed-top navbar navbar-expand-lg navbar navbar-light text-center"
-            style="background-color: burlywood;height: 100px;">
+    <div class="container-fluid" style="margin-top: 130px;">
+        <nav class="fixed-top navbar navbar-expand-lg navbar nav-tabs navbar-light text-center"
+            style="background-color: burlywood;height: 100px;" id="myTab" role="tablist">
             <div class="flex-grow-0">
                 <a class="navbar-brand" href="#">
-                  <img src="./_image/首頁圖.png" alt="Logo" width="90px" class="d-inline-block align-top">
+                    <img src="./_image/首頁圖.png" alt="Logo" width="90px" class="d-inline-block align-top">
                 </a>
             </div>
-            <button class="navbar-toggler"  type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: burlywood;">
-            <div class="flex-grow-1 h2 "><a href="#" class="btn"  style="font-size:50px;">四格漫畫</a></div>
-            <div class="flex-grow-1 h2  "><a href="#" class="btn"  style="font-size:50px;">影片</a></div>
-            <div class="flex-grow-1 h2  "><a href="#" class="btn" style="font-size:50px;">LINE貼圖</a></div>
+                <div class="flex-grow-1 h2 "><a href="#" class="btn" style="font-size:50px;">四格漫畫</a></div>
+                <div class="flex-grow-1 h2  "><a href="#" class="btn" style="font-size:50px;">影片</a></div>
+                <div class="flex-grow-1 h2 nav-item" role="presentation"><img class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" src="./_image/Line_.png"></div>
             </div>
         </nav>
-        <div class="d-grid d-lg-flex col text-center border w-75 container-lg">
-            <div class="flex-grow-0"><img src="./_image/首頁圖.png"></div>
-            <div class="flex-grow-1 text-break"><p>1231231231123123123112312312311231231231123123123112312312311231231231123123123112312312311231231231123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123</p></div>
+        <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div
+                    class="d-grid d-lg-flex  align-items-center border border-5 text-center text-lg-start  w-75 container-lg pt-1">
+                    <div class="flex-grow-0"><img src="./_image/首頁圖.png"></div>
+                    <div class="flex-grow-1 text-break ">
+                        <p class="h4 ">
+                            1231231231123123123112312312311231231231123123123112312312311231231231123123123112312312311231231231123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="d-grid d-lg-flex  align-items-center border border-5 text-center text-lg-start  w-75 container-lg pt-1 mt-3">
+                    <div class="flex-grow-0"><img src="./_image/首頁圖.png"></div>
+                    <div class="flex-grow-1 text-break ">
+                        <p class="h4 ">
+                            1231231231123123123112312312311231231231123123123112312312311231231231123123123112312312311231231231123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="d-grid d-lg-flex  align-items-center border border-5 text-center text-lg-start  w-75 container-lg pt-1 mt-3">
+                    <div class="flex-grow-0"><img src="./_image/首頁圖.png"></div>
+                    <div class="flex-grow-1 text-break ">
+                        <p class="h4 ">
+                            1231231231123123123112312312311231231231123123123112312312311231231231123123123112312312311231231231123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="d-grid d-lg-flex  align-items-center border border-5 text-center text-lg-start  w-75 container-lg pt-1 mt-3">
+                    <div class="flex-grow-0"><img src="./_image/首頁圖.png"></div>
+                    <div class="flex-grow-1 text-break ">
+                        <p class="h4 ">
+                            1231231231123123123112312312311231231231123123123112312312311231231231123123123112312312311231231231123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123123
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="d-grid d-lg-flex border border-5 text-center w-75 container-lg pt-1">
+                    <div class="flex-grow-1"><img src="./_image/LINE貼圖內容.jpg"></div>
+                </div>
+            </div>
         </div>
-
     </div>
+    <!-- <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+    </div> -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
+    <script>
+
+    </script>
 </body>
 
 </html>
