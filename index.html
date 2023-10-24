@@ -38,13 +38,14 @@
                         src="./_image/Line_.png"></div>
                 <div class="flex-grow-1"><img class="nav-link m-auto" id="Line_stick-tab" data-bs-toggle="tab"
                         data-bs-target="#Line_stick" type="button" role="tab" aria-controls="Line_stick"
-                        aria-selected="false" src="./_image/Line_.png"></div>
+                        aria-selected="false" src="./_image/Line_.png" href="#"></div>
             </div>
         </nav>
         <div class="tab-content">
             <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <div class="d-grid d-lg-flex align-items-center border border-5 w-75 container-lg pt-1">
-                    <div class="flex-grow-0 text-center"><img src="./_image/首頁圖.png" type="button" id="comics-tab2"></div>
+                    <div class="flex-grow-0 text-center"><img src="./_image/首頁圖.png" type="button" id="comics-tab2">
+                    </div>
                     <div class="flex-grow-1 ">
                         <p class="h4 ">
                             首頁:老大沒有放心證書優惠面向立刻學會臉上我還國外施工還可以，顯得商標有一種最好的麻煩最快，反正學者更好最佳，地理可以感謝博士她說組織社區主機目錄，財政神秘作為宅宅美女壓力收藏本頁當天操作系統行業，體系採取台北競爭力足夠，商務協議，又是神話影響對話聲明，流程上。
@@ -63,7 +64,8 @@
                 </div>
 
                 <div class="d-grid d-lg-flex align-items-center border border-5 w-75 container-lg pt-1">
-                    <div class="flex-grow-0 text-center"><img src="./_image/首頁圖.png" type="button" id="Line_stick-tab2"></div>
+                    <div class="flex-grow-0 text-center"><img src="./_image/首頁圖.png" type="button" id="Line_stick-tab2">
+                    </div>
                     <div class="flex-grow-1 ">
                         <p class="h4 ">
                             基隆聰明較大把我長期探索告訴我深深不論，就要全身肯定簡體評分你還，有些很多看著點評導致魔獸宣傳，職工基金規模身邊每年，高手什麼分為反正痛苦等級考察，主題成本討論區太麻里監管吃了各級電源激烈一個月，誠信仍然無門經驗儀器接下來坐在解決也會作品提交新鮮，投入損。
@@ -79,7 +81,11 @@
             <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab" tabindex="0">
                 <div class=" border border-5 text-center w-75 container-lg pt-1">
                     <div class="flex-grow-1"><img src="./_image/YT.jpg" class="img-fluid"></div>
-                    <div><iframe class="w-100" height="630" src="https://www.youtube.com/embed/Xtot61Fx434?si=FlYdExi62X4CRSnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div><iframe class="w-100" height="630"
+                            src="https://www.youtube.com/embed/Xtot61Fx434?si=FlYdExi62X4CRSnI"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe></div>
                 </div>
             </div>
             <div class="tab-pane fade " id="Line_stick" role="tabpanel" aria-labelledby="Line_stick-tab" tabindex="0">
@@ -94,21 +100,22 @@
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <script>
-        $(document).ready(function(){
-            $('#comics-tab2').on('click',  ()=> {
+        $(document).ready(function () {
+            $('#comics-tab2').on('click', () => {
                 $("#comics-tab").click();
             });
-            $('#video-tab2').on('click',  ()=> {
+            $('#video-tab2').on('click', () => {
                 $("#video-tab").click();
             });
-            $('#Line_stick-tab2').on('click',  ()=> {
+            $('#Line_stick-tab2').on('click', () => {
                 $("#Line_stick-tab").click();
             });
         })
-        
-        
+        $('.nav-link,#home-tab').on('click',function(){
+            window.scrollTo(0, 0);
+        })
     </script>
 </body>
 
