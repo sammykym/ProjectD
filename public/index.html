@@ -18,9 +18,9 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="margin-top: 130px;">
+    <div class="container-fluid" style="margin-top: 107px;">
         <nav class="fixed-top navbar navbar-expand-lg nav nav-tabs" style="background-color: burlywood;" role="tablist">
-            <div class="flex-grow-0">
+            <div class="flex-grow-0 ms-3">
                 <img src="./_image/首頁圖.png" alt="Logo" width="90px" class="active" id="home-tab" data-bs-toggle="tab"
                     data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
             </div>
@@ -32,13 +32,13 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent" style="background-color: burlywood;">
                 <div class="flex-grow-1"><img class="nav-link m-auto" id="comics-tab" data-bs-toggle="tab"
                         data-bs-target="#comics" type="button" role="tab" aria-controls="comics" aria-selected="false"
-                        src="./_image/Line_.png"></div>
+                        src="./_image/漫畫標題.png" width="90%"> </div>
                 <div class="flex-grow-1"><img class="nav-link m-auto" id="video-tab" data-bs-toggle="tab"
                         data-bs-target="#video" type="button" role="tab" aria-controls="video" aria-selected="false"
-                        src="./_image/Line_.png"></div>
-                <div class="flex-grow-1"><img class="nav-link m-auto" id="Line_stick-tab" data-bs-toggle="tab"
+                        src="./_image/YT標題.png" width="90%"></div>
+                <div class="flex-grow-1"><img class="nav-link m-auto" calss id="Line_stick-tab" data-bs-toggle="tab"
                         data-bs-target="#Line_stick" type="button" role="tab" aria-controls="Line_stick"
-                        aria-selected="false" src="./_image/Line_.png" href="#"></div>
+                        aria-selected="false" src="./_image/LINE標題.png" width="90%" href="#"></div>
             </div>
         </nav>
         <div class="tab-content">
@@ -78,45 +78,46 @@
                     <div class="flex-grow-1"><img src="./_image/漫畫封面.jpg"></div>
                 </div>
             </div>
-            <div class="tab-pane fade " id="video" role="tabpanel" aria-labelledby="video-tab" tabindex="0">
-                <div class=" border border-5 text-center w-75 container-lg pt-1">
-                    <div class="flex-grow-1"><img src="./_image/YT_3.png" class="img-fluid"></div>
-                    <div><iframe class="w-100" height="630"
-                            src="https://www.youtube.com/embed/Xtot61Fx434?si=FlYdExi62X4CRSnI"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe></div>
+            <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab"
+                tabindex="0">
+                <div class="flex-grow-1 mx-1 mb-1"><img src="./_image/YT_.png" class="img-fluid"></div>
+                <div class=" text-center container-lg  ratio ratio-4x3" >
+                    <iframe  src="https://www.youtube.com/embed/Xtot61Fx434?si=FlYdExi62X4CRSnI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="tab-pane fade " id="Line_stick" role="tabpanel" aria-labelledby="Line_stick-tab" tabindex="0">
-                <div class="d-grid d-lg-flex border border-5 text-center w-75 container-lg pt-1">
-                    <div class="flex-grow-1"><img src="./_image/LINE貼圖內容.jpg"></div>
+            <div class="tab-pane fade" id="Line_stick" role="tabpanel" aria-labelledby="Line_stick-tab" tabindex="0">
+                <div class="d-grid d-lg-flex text-center container-lg pt-1">
+                    <div class="flex-grow-1"><img src="./_image/LINE標題.png" width="100%"></div>
+                </div>
+                <div class="d-grid d-lg-flex  text-center w-75 container-lg pt-1">
+                    <div class="flex-grow-1"><img src="./_image/貼圖_1.png"><img src="./_image/貼圖_2.png"><img src="./_image/貼圖_3.png"></div>
                 </div>
             </div>
+            <div class="fixed-bottom text-end m-4"><img src="./_image/首頁圖.png" width="50px"> </div>
         </div>
-    </div>
-    <div class="fixed-bottom text-end m-4"><img src="./_image/首頁圖.png" width="50px"> </div>
 
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <script>
-        $(document).ready(function () {
-            $('#comics-tab2').on('click', () => {
-                $("#comics-tab").click();
-            });
-            $('#video-tab2').on('click', () => {
-                $("#video-tab").click();
-            });
-            $('#Line_stick-tab2').on('click', () => {
-                $("#Line_stick-tab").click();
-            });
-        })
-        $('.nav-link,#home-tab').on('click',function(){
-            window.scrollTo(0, 0);
-        })
-    </script>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <script>
+            $(document).ready(function () {
+                $('#comics-tab2').on('click', () => {
+                    $("#comics-tab").click();
+                });
+                $('#video-tab2').on('click', () => {
+                    $("#video-tab").click();
+                });
+                $('#Line_stick-tab2').on('click', () => {
+                    $("#Line_stick-tab").click();
+                });
+            })
+            $('.nav-link,#home-tab').on('click', function () {
+                window.scrollTo(0, 0);
+            })
+        </script>
 </body>
 
 </html>
