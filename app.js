@@ -8,6 +8,7 @@
 // 以 Express 建立 Web 伺服器
 var express = require("express");
 var app = express();
+const path = require('path')
 
 // 以 body-parser 模組協助 Express 解析表單與JSON資料
 var bodyParser = require('body-parser');
@@ -15,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Web 伺服器的靜態檔案置於 public 資料夾
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname,"public")));
 
 // 以 express-session 管理狀態資訊
 var session = require('express-session');
@@ -45,6 +46,34 @@ var connection = mysql.createConnection({
     database: "bulletin_board"
 });
 
+app.get("/", function (req, res) {
+    connection.query(
+        "select message_id,message_title,message_text,DATE_FORMAT(message_date,'%Y/%m/%d-%H:%i:%s') As message_date from message_board",
+        [],
+        function (error, result) {
+            res.render("index.ejs", {
+                dataList: result,
+            });
+        }
+        // function (error, result) {
+        //     var message_id = [],message_title = [],message_text = [],message_date = []
+        //     for (let i = 0; i < result.length; i++) {
+        //         message_id   [i] = result[i].message_id
+        //         message_title[i] = result[i].message_title
+        //         message_text [i] = result[i].message_text
+        //         message_date [i] = result[i].message_date
+        //     }
+        //     res.render("test.ejs", {
+        //         data_id   :message_id   ,
+        //         data_title:message_title,
+        //         data_text :message_text ,
+        //         data_date :message_date 
+        //     });
+        // }
+    )
+
+})
+
 //get方法 (SQL) 
 //取全部
 
@@ -52,7 +81,7 @@ var connection = mysql.createConnection({
 app.get("/message_board", function (req, res) {
     // connection.query("SQL指令", [參數], function(錯誤訊息,輸出結果){})
     connection.query(
-        "select * from news",
+        "select * from message_board",
         [],
         function (error, result) {
             res.send(JSON.stringify(result));
@@ -65,7 +94,7 @@ app.get("/message_board", function (req, res) {
 app.get("/message_board/:id", function (req, res) {
     // connection.query("SQL指令 ?=參數", [參數1,參數2], function(錯誤訊息,輸出結果){})
     connection.query(
-        "select * from news where newsId = ?",
+        "select * from message_board where message_id = ?",
         [req.params.id],
         //req.params指所有來源參數(:id)
         function (error, result) {
@@ -82,13 +111,12 @@ app.get("/message_board/:id", function (req, res) {
 
 })
 
-app.post('/message_board', function (req, res) {
+app.post('/message_board/post', function (req, res) {
     connection.query(
-        'insert into news(title,ymd) value (?,?)',
-        [req.body.title, req.body.ymd],
+        'insert into message_board(message_title,message_text) value (?,?)',
+        [req.body.recipient_name, req.body.message_text],
         function (error, result) {
-            console.log(result)
-            res.send("OK, row(s) inserted")
+            res.redirect("/");
         }
     )
 })
@@ -108,7 +136,7 @@ app.put("/message_board", function (request, response) {
 //刪除
 app.delete('message_board',function (req,res) {
     connection.query(
-        "delete from news where newsId = ?",
+        "delete from message_board where newsId = ?",
         [request.body.newsId]
     );
     res.send("row deleted.");
