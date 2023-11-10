@@ -22,12 +22,15 @@
         .animate__animated:hover{
             animation-iteration-count : infinite
         }
+        #video-tab,#Line_stick-tab,#comics-tab{
+            min-width:320px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid" style="margin-top: 107px;">
-        <nav class="fixed-top navbar navbar-expand-lg nav nav-tabs" style="background-color: burlywood;" role="tablist">
+        <nav class="fixed-top navbar navbar-expand-lg nav nav-tabs rounded" style="background-color: burlywood;" role="tablist">
             <div class="flex-grow-0 ms-3">
                 <img src="./_image/首頁圖.png" class="active animate__animated animate__zoomIn" alt="Logo" width="90px"
                     id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
@@ -47,7 +50,7 @@
                         src="/_image/YT標題.png" width="90%"></div>
                 <div class="flex-grow-1"><img class="nav-link m-auto" calss id="Line_stick-tab" data-bs-toggle="tab"
                         data-bs-target="#Line_stick" type="button" role="tab" aria-controls="Line_stick"
-                        aria-selected="false" src="/_image/LINE標題.png" width="90%" href="#"></div>
+                        aria-selected="false" src="/_image/LINE標題.png" width="90%"  href="#"></div>
             </div>
         </nav>
         <div class="tab-content">
@@ -183,9 +186,6 @@
                 $(this).removeClass('animate__zoomIn')
                 $(this).addClass('animate__pulse')
             })
-            // $("#bottom_img").mouseenter(function () {
-            //     $(this).addClass('animate__pulse')
-            // })
         </script>
 </body>
 

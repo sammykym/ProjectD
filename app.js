@@ -48,7 +48,7 @@ var connection = mysql.createConnection({
 
 app.get("/", function (req, res) {
     connection.query(
-        "select message_id,message_title,message_text,DATE_FORMAT(message_date,'%Y/%m/%d-%H:%i:%s') As message_date from message_board",
+        "select message_id,message_title,message_text,DATE_FORMAT(message_date,'%Y/%m/%d %H:%i:%s') As message_date from message_board",
         [],
         function (error, result) {
             res.render("index.ejs", {
