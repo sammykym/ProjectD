@@ -19,18 +19,24 @@
         body {
             background-color: rgb(255, 225, 201);
         }
-        .animate__animated:hover{
-            animation-iteration-count : infinite
+
+        .animate__animated:hover {
+            animation-iteration-count: infinite
         }
-        #video-tab,#Line_stick-tab,#comics-tab{
-            min-width:320px;
+
+        #video-tab,
+        #Line_stick-tab,
+        #comics-tab {
+            min-width: 320px;
+            max-width: 600px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid" style="margin-top: 107px;">
-        <nav class="fixed-top navbar navbar-expand-lg nav nav-tabs rounded" style="background-color: burlywood;" role="tablist">
+    <div class="container-fluid" style="margin-top: 115px;">
+        <nav class="fixed-top navbar navbar-expand-lg nav nav-tabs rounded rounded-3"
+            style="background-color: burlywood;" role="tablist">
             <div class="flex-grow-0 ms-3">
                 <img src="./_image/首頁圖.png" class="active animate__animated animate__zoomIn" alt="Logo" width="90px"
                     id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab"
@@ -50,13 +56,14 @@
                         src="/_image/YT標題.png" width="90%"></div>
                 <div class="flex-grow-1"><img class="nav-link m-auto" calss id="Line_stick-tab" data-bs-toggle="tab"
                         data-bs-target="#Line_stick" type="button" role="tab" aria-controls="Line_stick"
-                        aria-selected="false" src="/_image/LINE標題.png" width="90%"  href="#"></div>
+                        aria-selected="false" src="/_image/LINE標題.png" width="90%" href="#"></div>
             </div>
         </nav>
         <div class="tab-content">
             <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <div class="d-grid d-lg-flex align-items-center border border-2 border-light w-75 container pt-1 mb-2">
-                    <div class="flex-grow-0 text-center"><img src="/_image/首頁圖.png" type="button" id="comics-tab2">
+                    <div class="flex-grow-0 text-center "><img src="/_image/首頁漫畫.png"
+                            class="rounded rounded-5 animate__animated" type="button" id="comics-tab2">
                     </div>
                     <div class="flex-grow-1 ">
                         <p class="h4 ">
@@ -66,7 +73,8 @@
                 </div>
 
                 <div class="d-grid d-lg-flex align-items-center border border-2 border-light w-75 container pt-1 mb-2">
-                    <div class="flex-grow-0 text-center"><img src="/_image/首頁圖.png" type="button" id="video-tab2">
+                    <div class="flex-grow-0 text-center"><img src="/_image/首頁影片.png"
+                            class="rounded rounded-5 animate__animated" type="button" id="video-tab2">
                     </div>
                     <div class="flex-grow-1 ">
                         <p class="h4 ">從奇妙糕糕星來地球修行的杯子蛋糕糕。
@@ -76,7 +84,8 @@
                 </div>
 
                 <div class="d-grid d-lg-flex align-items-center border border-2 border-light w-75 container pt-1 mb-2">
-                    <div class="flex-grow-0 text-center"><img src="/_image/首頁圖.png" type="button" id="Line_stick-tab2">
+                    <div class="flex-grow-0 text-center"><img src="/_image/首頁貼圖.png"
+                            class="rounded rounded-5 animate__animated" type="button" id="Line_stick-tab2">
                     </div>
                     <div class="flex-grow-1 ">
                         <p class="h4 ">
@@ -85,13 +94,14 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade " id="comics" role="tabpanel" aria-labelledby="comics-tab" tabindex="0">
-                <div class="d-grid d-lg-flex border border-5 text-center w-75 container pt-1">
-                    <div class="flex-grow-1"><img src="/_image/漫畫封面.jpg"></div>
+            <div class="tab-pane fade text-center" id="comics" role="tabpanel" aria-labelledby="comics-tab"
+                tabindex="0">
+                <div class="flex-grow-1 mx-1 mb-1"><img src="/_image/漫畫封面.png" class="img-fluid rounded rounded-5">
                 </div>
+                <img src="/_image/漫畫內容.png" class="img-fluid w-75" style="min-width: 400px;">
             </div>
             <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab" tabindex="0">
-                <div class="flex-grow-1 mx-1 mb-1"><img src="/_image/YT_.png" class="img-fluid"></div>
+                <div class="flex-grow-1 mx-1 mb-1"><img src="/_image/YT_.png" class="img-fluid rounded rounded-5"></div>
                 <div class=" text-center container  ratio ratio-4x3">
                     <iframe src="https://www.youtube.com/embed/Xtot61Fx434?si=FlYdExi62X4CRSnI"
                         title="YouTube video player" frameborder="0"
@@ -99,17 +109,17 @@
                         allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="tab-pane fade" id="Line_stick" role="tabpanel" aria-labelledby="Line_stick-tab" tabindex="0">
-                <div class="d-grid d-lg-flex text-center container pt-1">
-                    <div class="flex-grow-1"><img src="/_image/LINE標題.png" width="100%"></div>
+            <div class="tab-pane fade text-center" id="Line_stick" role="tabpanel" aria-labelledby="Line_stick-tab"
+                tabindex="0">
+                <div class="flex-grow-1 mx-1 mb-1"><img src="/_image/貼圖封面.png" class="img-fluid rounded rounded-5">
                 </div>
-                <div class="d-block text-center w-75 container pt-1">
-                    <div><img src="/_image/貼圖_1.png" width="200px"><img src="/_image/貼圖_2.png"
-                            width="200px"><img src="/_image/貼圖_3.png" width="200px"></div>
-                </div>
+                <a href="https://store.line.me/stickershop/product/21923129/zh-Hant">
+                    <img src="/_image/貼圖內容.png" class="img-fluid w-75" style="min-width: 430px;">
+                </a>
             </div>
-            <div class="fixed-bottom text-end m-4"><a href="https://www.facebook.com/CakekeCup"><img
-                        src="/_image/首頁圖.png" width="50px" class="animate__animated" id="bottom_img"></a></div>
+            <div class="position-fixed bottom-0 end-0 m-4" style="z-index: 5"><a
+                    href="https://www.facebook.com/CakekeCup"><img src="/_image/首頁圖.png" width="50px"
+                        class="animate__animated" id="bottom_img"></a></div>
             <div class="header container" style="margin-top: 200px;">
                 <div class="page-header">
                     <h1 class="my-4">留言板</h1>
@@ -182,7 +192,7 @@
             $('.nav-link,#home-tab').on('click', function () {
                 window.scrollTo(0, 0);
             })
-            $("#home-tab,#bottom_img").mouseenter(function () {
+            $("#home-tab,#bottom_img,#Line_stick-tab2,#video-tab2,#comics-tab2").mouseenter(function () {
                 $(this).removeClass('animate__zoomIn')
                 $(this).addClass('animate__pulse')
             })

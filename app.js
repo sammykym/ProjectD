@@ -1,3 +1,13 @@
+// 安裝mysql並建立資料庫
+// CREATE DATABASE bulletin_board;
+// USE bulletin_board;
+// CREATE TABLE message_board (
+//     message_id int PRIMARY KEY AUTO_INCREMENT,
+//     message_title VARCHAR(20),
+//     message_text VARCHAR(50),
+//     message_date DATETIME DEFAULT NOW()
+// )
+
 //先安裝node.js與以下模組(npm install)
 // npm install
 // npm install express
@@ -55,21 +65,6 @@ app.get("/", function (req, res) {
                 dataList: result,
             });
         }
-        // function (error, result) {
-        //     var message_id = [],message_title = [],message_text = [],message_date = []
-        //     for (let i = 0; i < result.length; i++) {
-        //         message_id   [i] = result[i].message_id
-        //         message_title[i] = result[i].message_title
-        //         message_text [i] = result[i].message_text
-        //         message_date [i] = result[i].message_date
-        //     }
-        //     res.render("test.ejs", {
-        //         data_id   :message_id   ,
-        //         data_title:message_title,
-        //         data_text :message_text ,
-        //         data_date :message_date 
-        //     });
-        // }
     )
 
 })
